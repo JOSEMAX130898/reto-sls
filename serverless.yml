@@ -1,0 +1,22 @@
+org: max1308
+app: prueba
+service: sls-reto
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  #sruntime: nodejs14.x
+  region: us-east-2
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'
+    environment:
+      MYSQL_HOST : "reto.cwggrkoxudy5.us-east-2.rds.amazonaws.com"
+      MYSQL_USER : "root"
+      MYSQL_PASSWORD : "s1st3m4s"
+      MYSQL_DATABASE : "reto"
+      URL_SWAPI : "https://swapi.py4e.com/api"
