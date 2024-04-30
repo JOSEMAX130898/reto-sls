@@ -43,20 +43,6 @@ Unit tests with:
 npm run test
 ```
 
-After running deploy, you should see output similar to:
-
-```bash
-Deploying aws-node-express-api-project to stage dev (us-east-1)
-
-✔ Service deployed to stack aws-node-express-api-project-dev (196s)
-
-endpoint: ANY - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com
-functions:
-  api: aws-node-express-api-project-dev-api (766 kB)
-```
-
-_Note_: In current form, after deployment, your API is public and can be invoked by anyone. For production deployments, you might want to configure an authorizer. For details on how to do that, refer to [`httpApi` event docs](https://www.serverless.com/framework/docs/providers/aws/events/http-api/).
-
 ### Invocation
 
 After successful deployment, you can call the created application via HTTP:
